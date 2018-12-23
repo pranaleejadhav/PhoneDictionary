@@ -9,6 +9,8 @@ Developed Phone Dictionary using following tools:
 
 Screenshots:
 ![Contact List](https://raw.githubusercontent.com/pranaleejadhav/PhoneDictionary/master/screenshots/image1.png)
+![Add Contact](https://raw.githubusercontent.com/pranaleejadhav/PhoneDictionary/master/screenshots/image2.png)
+![Update Contact](https://raw.githubusercontent.com/pranaleejadhav/PhoneDictionary/master/screenshots/image3.png)
 
 
 ## Referred following sites:
