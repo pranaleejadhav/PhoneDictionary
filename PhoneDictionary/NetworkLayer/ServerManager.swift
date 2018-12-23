@@ -46,9 +46,13 @@ class ServerManager {
         
     }
     
-    func deleteContact(id: Int) -> Observable<Void> {
-        return Observable.create{ observer in
-            Alamofire.request("\(self.server_url)\'\(id)", method: .delete, parameters: nil, encoding: JSONEncoding.default)
+    func addContact(firstname: String, lastname: String, phonenumber: String) -> Observable<Void> {
+        let param = ["firstname": firstname,
+                     "lastname": lastname,
+                     "phonenumber": phonenumber]
+        
+        return Observable.create{ [param] observer -> Disposable in
+            Alamofire.request(self.server_url, method: .post, parameters: param, encoding: JSONEncoding.default)
                 .validate()
                 .responseJSON{ response in
                     switch(response.result){
@@ -62,6 +66,57 @@ class ServerManager {
                         }
                     }
                 }
+            return Disposables.create()
+        }
+        
+    }
+    
+    func deleteContact(id: Int) -> Observable<Void> {
+        return Observable.create{ observer in
+            Alamofire.request("\(self.server_url)/\(id)", method: .delete, parameters: nil, encoding: JSONEncoding.default)
+                .validate()
+                .responseJSON{ response in
+                    switch(response.result){
+                    case .success:
+                        observer.onNext(())
+                    case .failure(let error):
+                        if let statusCode = response.response?.statusCode, let reason = FailureReason(rawValue: statusCode) {
+                            observer.onError(reason)
+                        } else {
+                            observer.onError(error)
+                        }
+                    }
+                }
+            return Disposables.create()
+        }
+    }
+    
+    func updateContact(firstname: String, lastname: String, phonenumber: String, id: Int) -> Observable<Void> {
+        let param = ["firstname": firstname,
+                     "lastname": lastname,
+                     "phonenumber": phonenumber
+                     ]
+        
+        return Observable.create{[param] observer in
+            Alamofire.request("\(self.server_url)/\(id)", method: .patch, parameters: param, encoding: JSONEncoding.default)
+                .validate()
+                .responseJSON{ response in
+                    switch(response.result){
+                    case .success:
+                        guard response.data != nil else {
+                            observer.onError(response.error ?? FailureReason.notFound)
+                            return
+                        }
+                        observer.onNext(())
+                        
+                    case .failure(let error):
+                        if let statusCode = response.response?.statusCode, let reason = FailureReason(rawValue: statusCode) {
+                            observer.onError(reason)
+                        } else {
+                            observer.onError(error)
+                        }
+                    }
+            }
             return Disposables.create()
         }
     }

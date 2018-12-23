@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1BA00E21D01D3F00338926 /* UpdateFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA00D21D01D3F00338926 /* UpdateFriendViewModel.swift */; };
+		9C1BA01021D031AD00338926 /* ShowAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA00F21D031AD00338926 /* ShowAlertHelper.swift */; };
 		9C242F3D21CFDFD400DEE952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C242F3C21CFDFD400DEE952 /* AppDelegate.swift */; };
 		9C242F4221CFDFD400DEE952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C242F4021CFDFD400DEE952 /* Main.storyboard */; };
 		9C242F4421CFDFD600DEE952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C242F4321CFDFD600DEE952 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		2B1A49151D7C79703FF91971 /* Pods-PhoneDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneDictionary/Pods-PhoneDictionary.release.xcconfig"; sourceTree = "<group>"; };
+		9C1BA00D21D01D3F00338926 /* UpdateFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFriendViewModel.swift; sourceTree = "<group>"; };
+		9C1BA00F21D031AD00338926 /* ShowAlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertHelper.swift; sourceTree = "<group>"; };
 		9C242F3921CFDFD400DEE952 /* PhoneDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C242F3C21CFDFD400DEE952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C242F4121CFDFD400DEE952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			children = (
 				9C242F5B21CFF94500DEE952 /* ContactCellViewModel.swift */,
 				9C242F5D21CFF96D00DEE952 /* ContactsTableViewModel.swift */,
+				9C1BA00D21D01D3F00338926 /* UpdateFriendViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 		9C242F5621CFE51E00DEE952 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				9C1BA00F21D031AD00338926 /* ShowAlertHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -275,11 +281,13 @@
 				9C242F5A21CFEB9800DEE952 /* ServerManager.swift in Sources */,
 				9C242F5C21CFF94500DEE952 /* ContactCellViewModel.swift in Sources */,
 				9C242F5821CFEB3700DEE952 /* Contact.swift in Sources */,
+				9C1BA01021D031AD00338926 /* ShowAlertHelper.swift in Sources */,
 				9C242F5221CFE46B00DEE952 /* AddContactViewController.swift in Sources */,
 				9C242F6021D000FD00DEE952 /* ContactTableViewCell.swift in Sources */,
 				9C242F5021CFE0B200DEE952 /* ContactsTableViewController.swift in Sources */,
 				9C242F3D21CFDFD400DEE952 /* AppDelegate.swift in Sources */,
 				9C242F5E21CFF96D00DEE952 /* ContactsTableViewModel.swift in Sources */,
+				9C1BA00E21D01D3F00338926 /* UpdateFriendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

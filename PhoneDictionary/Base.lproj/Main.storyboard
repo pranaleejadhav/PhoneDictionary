@@ -58,12 +58,15 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Contacts" id="H3w-Bc-odf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vtl-dM-Yrq">
+                        <barButtonItem key="rightBarButtonItem" title="ADD" style="done" id="Vtl-dM-Yrq">
                             <connections>
-                                <segue destination="oI7-qY-UI2" kind="show" id="NRE-4c-Kqf"/>
+                                <segue destination="oI7-qY-UI2" kind="show" identifier="addContactSegue" id="NRE-4c-Kqf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="oI7-qY-UI2" kind="show" identifier="updateContactSegue" id="Rsk-nP-3BE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM6-tJ-OYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +75,7 @@
         <!--Add New Contact-->
         <scene sceneID="LAN-T3-O6n">
             <objects>
-                <viewController title="Add New Contact" id="oI7-qY-UI2" sceneMemberID="viewController">
+                <viewController title="Add New Contact" id="oI7-qY-UI2" customClass="AddContactViewController" customModule="PhoneDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qS4-WH-Lj5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +119,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f3J-5k-8az"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="z0m-jE-Cxm" id="Icb-Co-aRF"/>
+                        <outlet property="textFieldFirstname" destination="HeJ-nG-ZLh" id="0b7-4N-7uC"/>
+                        <outlet property="textFieldLastname" destination="c4e-mo-cuh" id="QMT-bw-ryW"/>
+                        <outlet property="textFieldPhoneNumber" destination="EQa-Bu-d6R" id="uSR-Qi-7Fe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDV-TH-C0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,4 +149,7 @@
             <point key="canvasLocation" x="-93.599999999999994" y="85.907046476761622"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rsk-nP-3BE"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -20,6 +20,7 @@ class ContactsTableViewModel {
     private let serverManager: ServerManager
     private let disposeBag = DisposeBag()
     private let observableCells = Variable<[ContactTableViewCellType]>([])
+    var onShowError = PublishSubject<AlertContents>()
     var contactCells: Observable<[ContactTableViewCellType]> {
         return observableCells.asObservable()
     }
@@ -28,6 +29,8 @@ class ContactsTableViewModel {
         return loader.asObservable().distinctUntilChanged()
         
     }
+    
+    
     
     init(serverManager: ServerManager = ServerManager()) {
         self.serverManager = serverManager
@@ -56,6 +59,28 @@ class ContactsTableViewModel {
             )
             .disposed(by: disposeBag)
     }
+    
+    
+    func deleteContact(contact: ContactCellViewModel) {
+        loader.value = true
+        serverManager
+            .deleteContact(id: contact.id)
+            .subscribe(
+                onNext: {
+                    [weak self] contacts in
+                    self?.getContacts()
+                },
+                onError: {[weak self] error in
+                    let okAlert = AlertContents(
+                        title: "Could not remove \(contact.firstname) \(contact.lastname).",
+                        message: (error as? ServerManager.FailureReason)?.getErrorMessage() ?? "Could not connect to server. Check your network and try again later.",
+                        action: AlertAction(buttonTitle: "OK", handler: { })
+                    )
+                    self?.onShowError.onNext(okAlert)
+                }
+            ).disposed(by: disposeBag)
+    }
+    
     
 }
 
