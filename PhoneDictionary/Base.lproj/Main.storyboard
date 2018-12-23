@@ -14,24 +14,48 @@
         <scene sceneID="akh-as-ebj">
             <objects>
                 <tableViewController id="h7Z-Zc-Sd9" customClass="ContactsTableViewController" customModule="PhoneDictionary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vzp-rr-kxN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vzp-rr-kxN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nbq-pU-xgj">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="80" id="nbq-pU-xgj" customClass="ContactTableViewCell" customModule="PhoneDictionary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nbq-pU-xgj" id="XMh-6l-wwF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3H-ig-zrb">
+                                            <rect key="frame" x="10" y="10" width="225" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCU-n5-i1c">
+                                            <rect key="frame" x="235" y="10" width="130" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nCU-n5-i1c" firstAttribute="bottom" secondItem="n3H-ig-zrb" secondAttribute="bottom" id="96t-Ig-L0g"/>
+                                        <constraint firstItem="nCU-n5-i1c" firstAttribute="top" secondItem="n3H-ig-zrb" secondAttribute="top" id="BiI-XN-7uI"/>
+                                        <constraint firstItem="n3H-ig-zrb" firstAttribute="width" secondItem="XMh-6l-wwF" secondAttribute="width" multiplier="0.6" id="NBv-dN-o6H"/>
+                                        <constraint firstAttribute="trailing" secondItem="nCU-n5-i1c" secondAttribute="trailing" constant="10" id="O6G-RW-OrW"/>
+                                        <constraint firstItem="n3H-ig-zrb" firstAttribute="leading" secondItem="XMh-6l-wwF" secondAttribute="leading" constant="10" id="YE5-BX-PyC"/>
+                                        <constraint firstAttribute="bottom" secondItem="n3H-ig-zrb" secondAttribute="bottom" constant="10" id="aQo-J4-AWH"/>
+                                        <constraint firstItem="nCU-n5-i1c" firstAttribute="leading" secondItem="n3H-ig-zrb" secondAttribute="trailing" id="laJ-c9-nmS"/>
+                                        <constraint firstItem="n3H-ig-zrb" firstAttribute="top" secondItem="XMh-6l-wwF" secondAttribute="top" constant="10" id="zpE-g0-39r"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelFullName" destination="n3H-ig-zrb" id="6Cg-cr-DiR"/>
+                                    <outlet property="labelPhoneNumber" destination="nCU-n5-i1c" id="tqQ-Df-3s8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="h7Z-Zc-Sd9" id="2Ls-oK-zVH"/>
-                            <outlet property="delegate" destination="h7Z-Zc-Sd9" id="OKS-00-hKB"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Contacts" id="H3w-Bc-odf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vtl-dM-Yrq">
