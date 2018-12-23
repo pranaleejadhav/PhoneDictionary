@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/pranalee/Documents/Exercise Files/PhoneDictionaryWebAPI/webAPI/.build/checkouts/crypto.git--1718022062800781073/Sources/CCryptoOpenSSL/include"
+    export *
+}

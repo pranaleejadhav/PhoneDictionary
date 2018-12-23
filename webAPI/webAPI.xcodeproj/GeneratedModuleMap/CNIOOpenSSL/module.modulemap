@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/pranalee/Documents/Exercise Files/PhoneDictionaryWebAPI/webAPI/.build/checkouts/swift-nio-ssl.git--2521933193197217229/Sources/CNIOOpenSSL/include"
+    export *
+}
