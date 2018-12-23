@@ -15,9 +15,11 @@
 		9C242F5221CFE46B00DEE952 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C242F5121CFE46B00DEE952 /* AddContactViewController.swift */; };
 		9C242F5821CFEB3700DEE952 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C242F5721CFEB3700DEE952 /* Contact.swift */; };
 		9C242F5A21CFEB9800DEE952 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C242F5921CFEB9800DEE952 /* ServerManager.swift */; };
+		A82CDF04726616B37014A57D /* Pods_PhoneDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97CE808ECC29B46986ACACD /* Pods_PhoneDictionary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1A49151D7C79703FF91971 /* Pods-PhoneDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneDictionary.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneDictionary/Pods-PhoneDictionary.release.xcconfig"; sourceTree = "<group>"; };
 		9C242F3921CFDFD400DEE952 /* PhoneDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C242F3C21CFDFD400DEE952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C242F4121CFDFD400DEE952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		9C242F5121CFE46B00DEE952 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		9C242F5721CFEB3700DEE952 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		9C242F5921CFEB9800DEE952 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		A97CE808ECC29B46986ACACD /* Pods_PhoneDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5320E58E20BBFCEE7759C20 /* Pods-PhoneDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneDictionary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoneDictionary/Pods-PhoneDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82CDF04726616B37014A57D /* Pods_PhoneDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				9C242F3B21CFDFD400DEE952 /* PhoneDictionary */,
 				9C242F3A21CFDFD400DEE952 /* Products */,
+				A0663B9BCA116CA1D7913F85 /* Pods */,
+				E9E6E1C8700EE4ED59081584 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +120,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		A0663B9BCA116CA1D7913F85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5320E58E20BBFCEE7759C20 /* Pods-PhoneDictionary.debug.xcconfig */,
+				2B1A49151D7C79703FF91971 /* Pods-PhoneDictionary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9E6E1C8700EE4ED59081584 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A97CE808ECC29B46986ACACD /* Pods_PhoneDictionary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C242F4B21CFDFD600DEE952 /* Build configuration list for PBXNativeTarget "PhoneDictionary" */;
 			buildPhases = (
+				EBD7ED4494B5D055B19743F6 /* [CP] Check Pods Manifest.lock */,
 				9C242F3521CFDFD400DEE952 /* Sources */,
 				9C242F3621CFDFD400DEE952 /* Frameworks */,
 				9C242F3721CFDFD400DEE952 /* Resources */,
+				C3021861B489DABDD999C234 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +204,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3021861B489DABDD999C234 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhoneDictionary/Pods-PhoneDictionary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoneDictionary/Pods-PhoneDictionary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD7ED4494B5D055B19743F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhoneDictionary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C242F3521CFDFD400DEE952 /* Sources */ = {
@@ -332,14 +411,12 @@
 		};
 		9C242F4C21CFDFD600DEE952 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5320E58E20BBFCEE7759C20 /* Pods-PhoneDictionary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhoneDictionary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranalee.group4.PhoneDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -349,14 +426,12 @@
 		};
 		9C242F4D21CFDFD600DEE952 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B1A49151D7C79703FF91971 /* Pods-PhoneDictionary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhoneDictionary/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pranalee.group4.PhoneDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
