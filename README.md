@@ -8,7 +8,7 @@ Developed Phone Dictionary using following tools:
 - Heroku
 
 Screenshots:
-![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
+![Contact List](https://raw.githubusercontent.com/pranaleejadhav/PhoneDictionary/master/screenshots/image1.png)
 
 
 ## Referred following sites:
