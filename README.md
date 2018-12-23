@@ -1,6 +1,11 @@
 # PhoneDictionary
-Developed Phone Dictionary using MVVM, RxSwift and Vapor Framework
+Developed Phone Dictionary using following tools:
 
+- MVVM
+- RxSwif
+- Vapor Framework
+- PostgreSQL
+- Heroku
 
 ## Referred following sites:
 
