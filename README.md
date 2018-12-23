@@ -2,9 +2,9 @@
 Developed Phone Dictionary using following tools:
 
 - MVVM
-- RxSwif
-- Vapor Framework
-- PostgreSQL
+- RxSwift
+- Vapor Framework (for webapi)
+- PostgreSQL 
 - Heroku
 
 Screenshots:
