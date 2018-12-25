@@ -1,1 +1,1 @@
-*.sh linguist-language=Swift
+webAPI/* linguist-vendored
