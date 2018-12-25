@@ -22,8 +22,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - RxAtomic (~> 4.0)
   - RxDataSources
   - RxSwift
+  - RxSwift (~> 4.0)
   - RxSwiftExt
   - SVProgressHUD
 
@@ -48,6 +50,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: dc64f02fde19ced2b232a9b98d3dd5e390b95e48
+PODFILE CHECKSUM: cefe24a25cb66c1f56522d5bef6b5f690cdb9c9a
 
 COCOAPODS: 1.5.0

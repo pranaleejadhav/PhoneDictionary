@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "928726FA8DE3855448AA70B9AFA2EB96"
+               BlueprintIdentifier = "072FC07C35E6A1E5237E11B6E5046065"
                BuildableName = "Pods_PhoneDictionary.framework"
                BlueprintName = "Pods-PhoneDictionary"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "928726FA8DE3855448AA70B9AFA2EB96"
+            BlueprintIdentifier = "072FC07C35E6A1E5237E11B6E5046065"
             BuildableName = "Pods_PhoneDictionary.framework"
             BlueprintName = "Pods-PhoneDictionary"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,0 +1,6 @@
+module Pods_PhoneDictionaryTests [system] {
+  umbrella header "Pods-PhoneDictionaryTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
